@@ -32,11 +32,12 @@ public class Activity_Family extends AppCompatActivity {
 
 
         // Create ArrayAdapter
-        WordAdapter itemsAdapter = new WordAdapter(this, words);
+        WordAdapter itemsAdapter = new WordAdapter(this, words,R.color.category_family);
         // Find ListView
         ListView listView = (ListView) findViewById(R.id.list);
         // Run adapter
         listView.setAdapter(itemsAdapter);
+
 
     }
 

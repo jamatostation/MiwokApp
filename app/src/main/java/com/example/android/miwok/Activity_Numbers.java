@@ -1,14 +1,20 @@
 package com.example.android.miwok;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class Activity_Numbers extends AppCompatActivity {
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +37,15 @@ public class Activity_Numbers extends AppCompatActivity {
         words.add(new Word("ten", "na'aacha",R.drawable.number_ten));
 
         // Create ArrayAdapter
-        WordAdapter itemsAdapter = new WordAdapter(this, words);
+        WordAdapter itemsAdapter = new WordAdapter(this, words,R.color.category_numbers);
         // Find ListView
         ListView listView = (ListView) findViewById(R.id.list);
         // Run adapter
         listView.setAdapter(itemsAdapter);
+
+
+
+
 
     }
 
